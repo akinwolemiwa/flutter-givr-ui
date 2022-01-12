@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:givr/routes/welcome.dart';
 import 'package:givr/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,9 +54,23 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           children: [
-            Container(
-              height: getPropScreenHeight(896),
-              color: const Color(0xff7D40AF),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: getPropScreenHeight(896),
+                  color: const Color(0xff7D40AF),
+                ),
+                // ignore: avoid_unnecessary_containers
+                Text(
+                  "Givr.",
+                  style: GoogleFonts.quicksand(
+                    color: Colors.white,
+                    fontSize: getPropScreenWidth(64),
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
