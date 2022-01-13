@@ -67,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   style: GoogleFonts.quicksand(
                     color: Colors.white,
                     fontSize: getPropScreenWidth(64),
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ],
