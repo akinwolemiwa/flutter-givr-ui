@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:givr/routes/login.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -53,26 +55,37 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     height: getPropScreenHeight(82),
                   ),
-                  Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(62),
-                        bottomRight: Radius.circular(62),
-                        topLeft: Radius.circular(62),
-                        bottomLeft: Radius.circular(62),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          child: const Login(),
+                          type: PageTransitionType.fade,
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(62),
+                          bottomRight: Radius.circular(62),
+                          topLeft: Radius.circular(62),
+                          bottomLeft: Radius.circular(62),
+                        ),
                       ),
-                    ),
-                    height: getPropScreenHeight(76),
-                    width: getPropScreenWidth(312),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Get Started",
-                        style: GoogleFonts.quicksand(
-                          color: const Color(0xff7D40AF),
-                          fontSize: getPropScreenWidth(23),
-                          fontWeight: FontWeight.w700,
+                      height: getPropScreenHeight(76),
+                      width: getPropScreenWidth(312),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Get Started",
+                          style: GoogleFonts.quicksand(
+                            color: const Color(0xff7D40AF),
+                            fontSize: getPropScreenWidth(23),
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                     ),
