@@ -22,10 +22,14 @@ class WelcomePage extends StatelessWidget {
                     foregroundDecoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                          color: const Color(0xffE0AAFF), width: 28.77),
+                        color: const Color(0xffE0AAFF),
+                        width: getPropScreenWidth(28.77),
+                      ),
                     ),
                     decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Color(0xffEED1FF)),
+                      shape: BoxShape.circle,
+                      color: Color(0xffEED1FF),
+                    ),
                   ),
                   SizedBox(
                     height: getPropScreenHeight(24),
