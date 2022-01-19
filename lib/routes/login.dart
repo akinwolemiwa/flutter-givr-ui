@@ -32,6 +32,7 @@ class Login extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(45),
             ),
+            const TextField(),
             SizedBox(
               height: getPropScreenHeight(72),
             ),
@@ -108,6 +109,78 @@ class Login extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class TextField extends StatelessWidget {
+  const TextField({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: getPropScreenHeight(67),
+          width: getPropScreenWidth(326),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: const Color(0xff909090).withOpacity(0.25),
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(37),
+            ),
+          ),
+          child: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.only(
+                  left: 15, bottom: 11, top: 11, right: 15),
+              border: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              errorBorder: InputBorder.none,
+              disabledBorder: InputBorder.none,
+              hintText: 'EMAIL',
+              hintStyle: GoogleFonts.roboto(
+                  fontSize: getPropScreenWidth(13),
+                  fontWeight: FontWeight.w300),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: getPropScreenHeight(23),
+        ),
+        Container(
+          height: getPropScreenHeight(67),
+          width: getPropScreenWidth(326),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: const Color(0xff909090).withOpacity(0.25),
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(37),
+            ),
+          ),
+          child: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            obscureText: true,
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.only(
+                  left: 15, bottom: 11, top: 11, right: 15),
+              border: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              errorBorder: InputBorder.none,
+              disabledBorder: InputBorder.none,
+              hintText: 'PASSWORD',
+              hintStyle: GoogleFonts.roboto(
+                  fontSize: getPropScreenWidth(13),
+                  fontWeight: FontWeight.w300),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
