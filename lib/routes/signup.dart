@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:givr/routes/signup.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +32,7 @@ class Login extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(45),
             ),
-            const TextField(),
+            const SignUpTextField(),
             SizedBox(
               height: getPropScreenHeight(72),
             ),
@@ -65,7 +64,7 @@ class Login extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Login",
+                  "Sign Up",
                   style: GoogleFonts.quicksand(
                     color: Colors.white,
                     fontSize: getPropScreenWidth(15),
@@ -77,35 +76,24 @@ class Login extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(9),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    child: const SignUp(),
-                    type: PageTransitionType.fade,
-                  ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don't have an account? ",
-                    style: GoogleFonts.roboto(
-                        fontSize: getPropScreenWidth(12),
-                        fontWeight: FontWeight.w300),
-                  ),
-                  Text(
-                    "Sign Up",
-                    style: GoogleFonts.roboto(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Already have an account? ",
+                  style: GoogleFonts.roboto(
                       fontSize: getPropScreenWidth(12),
-                      fontWeight: FontWeight.w300,
-                      color: const Color(0xff7D40AF),
-                    ),
+                      fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  "Log In",
+                  style: GoogleFonts.roboto(
+                    fontSize: getPropScreenWidth(12),
+                    fontWeight: FontWeight.w300,
+                    color: const Color(0xff7D40AF),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
@@ -114,13 +102,44 @@ class Login extends StatelessWidget {
   }
 }
 
-class TextField extends StatelessWidget {
-  const TextField({Key? key}) : super(key: key);
+class SignUpTextField extends StatelessWidget {
+  const SignUpTextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Container(
+          height: getPropScreenHeight(67),
+          width: getPropScreenWidth(326),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: const Color(0xff909090).withOpacity(0.25),
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(37),
+            ),
+          ),
+          child: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.only(
+                  left: 15, bottom: 11, top: 11, right: 15),
+              border: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              errorBorder: InputBorder.none,
+              disabledBorder: InputBorder.none,
+              hintText: 'NAME',
+              hintStyle: GoogleFonts.roboto(
+                  fontSize: getPropScreenWidth(13),
+                  fontWeight: FontWeight.w300),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: getPropScreenHeight(23),
+        ),
         Container(
           height: getPropScreenHeight(67),
           width: getPropScreenWidth(326),
