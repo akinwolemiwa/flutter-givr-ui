@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:givr/models/navbarmodel.dart';
 import 'package:givr/routes/welcome.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,13 +15,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Givr',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => NavBarProvider(),
+      child: MaterialApp(
+        title: 'Givr',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const SplashScreen(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const SplashScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -37,7 +42,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
-        context,
+        // ignore: unnecessary_this
+        this.context,
         MaterialPageRoute(
           builder: (context) => const WelcomePage(),
         ),

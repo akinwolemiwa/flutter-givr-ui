@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:givr/routes/signup.dart';
+import 'package:givr/routes/auth/signup.dart';
+import 'package:givr/routes/home/nav.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -37,39 +38,50 @@ class Login extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(72),
             ),
-            Container(
-              decoration: BoxDecoration(
-                // ignore: prefer_const_constructors
-                color: Color(0xff7D40AF),
-                // ignore: prefer_const_constructors
-                borderRadius: BorderRadius.only(
-                  // ignore: prefer_const_constructors
-                  topRight: Radius.circular(62),
-                  // ignore: prefer_const_constructors
-                  bottomRight: Radius.circular(62),
-                  // ignore: prefer_const_constructors
-                  topLeft: Radius.circular(62),
-                  // ignore: prefer_const_constructors
-                  bottomLeft: Radius.circular(62),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.25),
-                    offset: const Offset(0, 4),
-                    blurRadius: 4,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const Nav(),
+                    type: PageTransitionType.fade,
                   ),
-                ],
-              ),
-              height: getPropScreenHeight(64),
-              width: getPropScreenWidth(206),
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Login",
-                  style: GoogleFonts.quicksand(
-                    color: Colors.white,
-                    fontSize: getPropScreenWidth(15),
-                    fontWeight: FontWeight.w700,
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  // ignore: prefer_const_constructors
+                  color: Color(0xff7D40AF),
+                  // ignore: prefer_const_constructors
+                  borderRadius: BorderRadius.only(
+                    // ignore: prefer_const_constructors
+                    topRight: Radius.circular(62),
+                    // ignore: prefer_const_constructors
+                    bottomRight: Radius.circular(62),
+                    // ignore: prefer_const_constructors
+                    topLeft: Radius.circular(62),
+                    // ignore: prefer_const_constructors
+                    bottomLeft: Radius.circular(62),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.25),
+                      offset: const Offset(0, 4),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+                height: getPropScreenHeight(64),
+                width: getPropScreenWidth(206),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Login",
+                    style: GoogleFonts.quicksand(
+                      color: Colors.white,
+                      fontSize: getPropScreenWidth(15),
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
