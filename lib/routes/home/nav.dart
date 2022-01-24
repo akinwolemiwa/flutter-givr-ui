@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:givr/models/navbarmodel.dart';
 import 'package:givr/routes/home/homepage.dart';
 import 'package:givr/routes/home/notificationscreen.dart';
+import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:givr/routes/home/profile.dart';
 import 'package:provider/provider.dart';
 
@@ -28,17 +29,29 @@ class _NavState extends State<Nav> {
         onTap: (index) {
           nav.currentIndex = index;
         },
+        backgroundColor: const Color(0xff7B2CBF),
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.white,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Boxicons.bxs_home,
+              size: 37,
+            ),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(
+              Icons.notifications,
+              size: 37,
+            ),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Boxicons.bxs_user_circle,
+              size: 37,
+            ),
             label: "",
           ),
         ],
