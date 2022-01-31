@@ -10,6 +10,8 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String gift = 'assets/svg/gift.svg';
+    String contact = 'assets/svg/contact.svg';
+    String settings = 'assets/svg/settings.svg';
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
@@ -201,7 +203,7 @@ class Profile extends StatelessWidget {
                           height: getPropScreenHeight(25),
                           width: getPropScreenWidth(25),
                           child: SvgPicture.asset(
-                            gift,
+                            contact,
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -255,7 +257,7 @@ class Profile extends StatelessWidget {
                           height: getPropScreenHeight(25),
                           width: getPropScreenWidth(25),
                           child: SvgPicture.asset(
-                            gift,
+                            settings,
                             fit: BoxFit.contain,
                           ),
                         ),
