@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:givr/routes/charity/charity.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -99,52 +101,63 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: getPropScreenHeight(170),
-                      width: getPropScreenWidth(170),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color(0xffE0AAFF),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            child: const Charity(),
+                            type: PageTransitionType.fade,
+                          ),
+                        );
+                      },
+                      child: Container(
+                        height: getPropScreenHeight(170),
+                        width: getPropScreenWidth(170),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xffE0AAFF),
+                          ),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(25),
+                          ),
                         ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(25),
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xffE0AAFF),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(14),
-                              child: SizedBox(
-                                height: getPropScreenHeight(30),
-                                width: getPropScreenWidth(30),
-                                child: SvgPicture.asset(
-                                  lovehand,
-                                  fit: BoxFit.contain,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xffE0AAFF),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(14),
+                                child: SizedBox(
+                                  height: getPropScreenHeight(30),
+                                  width: getPropScreenWidth(30),
+                                  child: SvgPicture.asset(
+                                    lovehand,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(
-                            height: getPropScreenHeight(16),
-                          ),
-                          SizedBox(
-                            width: getPropScreenWidth(85),
-                            child: Text(
-                              'Donate to a charity',
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.quicksand(
-                                fontSize: getPropScreenWidth(14),
-                                fontWeight: FontWeight.w400,
+                            SizedBox(
+                              height: getPropScreenHeight(16),
+                            ),
+                            SizedBox(
+                              width: getPropScreenWidth(85),
+                              child: Text(
+                                'Donate to a charity',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.quicksand(
+                                  fontSize: getPropScreenWidth(14),
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     Container(
