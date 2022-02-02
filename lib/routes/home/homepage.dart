@@ -103,8 +103,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
+                        Navigator.of(context, rootNavigator: false).push(
                           PageTransition(
                             child: const Charity(),
                             type: PageTransitionType.fade,

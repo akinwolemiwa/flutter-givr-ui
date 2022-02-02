@@ -40,87 +40,88 @@ class _NavState extends State<Nav> {
     //     const Profile(),
     // ];
     // final nav = Provider.of<NavBarProvider>(context);
-    return CupertinoApp(
-      debugShowCheckedModeBanner: false,
-      home: WillPopScope(
-        onWillPop: () async {
-          return !await keysList[tabController.index].currentState!.maybePop();
-        },
-        child: CupertinoTabScaffold(
-          tabBar: CupertinoTabBar(
-            activeColor: Colors.white,
-            inactiveColor: Colors.white,
-            backgroundColor: const Color(0xff7B2CBF),
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: EdgeInsets.only(top: 7),
-                  child: Icon(
-                    Boxicons.bxs_home,
-                    size: 30,
-                  ),
+    return WillPopScope(
+      onWillPop: () async {
+        return !await keysList[tabController.index].currentState!.maybePop();
+      },
+      child: CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(
+          activeColor: Colors.white,
+          inactiveColor: Colors.white,
+          backgroundColor: const Color(0xff7B2CBF),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(top: 7),
+                child: Icon(
+                  Boxicons.bxs_home,
+                  size: 30,
                 ),
-                label: "",
               ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: EdgeInsets.only(top: 7),
-                  child: Icon(
-                    Icons.notifications,
-                    size: 30,
-                  ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(top: 7),
+                child: Icon(
+                  Icons.notifications,
+                  size: 30,
                 ),
-                label: "",
               ),
-              BottomNavigationBarItem(
-                icon: Padding(
-                  padding: EdgeInsets.only(top: 7),
-                  child: Icon(
-                    Boxicons.bxs_user_circle,
-                    size: 30,
-                  ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsets.only(top: 7),
+                child: Icon(
+                  Boxicons.bxs_user_circle,
+                  size: 30,
                 ),
-                label: "",
               ),
-            ],
-          ),
-          tabBuilder: (context, index) {
-            switch (index) {
-              case 0:
-                return CupertinoTabView(
-                  builder: (context) {
-                    return const CupertinoPageScaffold(
-                      child: HomePage(),
-                    );
-                  },
-                );
-              case 1:
-                return CupertinoTabView(
-                  builder: (context) {
-                    return const CupertinoPageScaffold(
-                      child: NotifScreen(),
-                    );
-                  },
-                );
-              case 2:
-                return CupertinoTabView(
-                  builder: (context) {
-                    return const CupertinoPageScaffold(
-                      child: Profile(),
-                    );
-                  },
-                );
-              default:
-                return CupertinoTabView(
-                  builder: (context) {
-                    return const CupertinoPageScaffold(
-                      child: HomePage(),
-                    );
-                  },
-                );
-            }
-          },
+              label: "",
+            ),
+          ],
         ),
+        tabBuilder: (context, index) {
+          switch (index) {
+            case 0:
+              return CupertinoTabView(
+                navigatorKey: firstTabNavKey,
+                builder: (context) {
+                  return const CupertinoPageScaffold(
+                    child: HomePage(),
+                  );
+                },
+              );
+            case 1:
+              return CupertinoTabView(
+                navigatorKey: secondTabNavKey,
+                builder: (context) {
+                  return const CupertinoPageScaffold(
+                    child: NotifScreen(),
+                  );
+                },
+              );
+            case 2:
+              return CupertinoTabView(
+                navigatorKey: thirdTabNavKey,
+                builder: (context) {
+                  return const CupertinoPageScaffold(
+                    child: Profile(),
+                  );
+                },
+              );
+            default:
+              return CupertinoTabView(
+                navigatorKey: firstTabNavKey,
+                builder: (context) {
+                  return const CupertinoPageScaffold(
+                    child: HomePage(),
+                  );
+                },
+              );
+          }
+        },
       ),
     );
 
