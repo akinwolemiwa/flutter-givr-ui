@@ -5,6 +5,7 @@ import 'package:givr/routes/welcome.dart';
 import 'package:givr/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +31,15 @@ class MyApp extends StatelessWidget {
       child: ChangeNotifierProvider(
         create: (context) => NavBarProvider(),
         child: MaterialApp(
+          builder: (context, widget) => ResponsiveWrapper.builder(
+            ClampingScrollWrapper.builder(context, widget!),
+            breakpoints: const [
+              ResponsiveBreakpoint.resize(350, name: MOBILE),
+              ResponsiveBreakpoint.autoScale(600, name: TABLET),
+              ResponsiveBreakpoint.resize(800, name: DESKTOP),
+              ResponsiveBreakpoint.autoScale(1700, name: 'XL')
+            ],
+          ),
           title: 'Givr',
           theme: ThemeData(
             primarySwatch: Colors.blue,
