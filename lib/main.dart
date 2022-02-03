@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:givr/models/navbarmodel.dart';
 import 'package:givr/routes/welcome.dart';
 import 'package:givr/size_config.dart';
@@ -15,15 +16,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => NavBarProvider(),
-      child: MaterialApp(
-        title: 'Givr',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return Listener(
+      onPointerDown: (_) {
+        final FocusScopeNode currentScope = FocusScope.of(context);
+        if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
+          FocusManager.instance.primaryFocus!.unfocus();
+        }
+      },
+      child: ChangeNotifierProvider(
+        create: (context) => NavBarProvider(),
+        child: MaterialApp(
+          title: 'Givr',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: const SplashScreen(),
+          debugShowCheckedModeBanner: false,
         ),
-        home: const SplashScreen(),
-        debugShowCheckedModeBanner: false,
       ),
     );
   }
