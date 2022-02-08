@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:givr/models/navbarmodel.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
 import 'package:givr/view/routes/welcome.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -88,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Container(
                   height: getPropScreenHeight(896),
-                  color: const Color(0xff7D40AF),
+                  color: primarycolour,
                 ),
                 // ignore: avoid_unnecessary_containers
                 Text(

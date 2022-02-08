@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
 import 'package:givr/view/routes/auth/login.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -101,7 +102,7 @@ class SignUp extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       fontSize: getPropScreenWidth(12),
                       fontWeight: FontWeight.w300,
-                      color: const Color(0xff7D40AF),
+                      color: primarycolour,
                     ),
                   ),
                 ],

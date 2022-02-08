@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
 import 'package:givr/view/routes/auth/login.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff7D40AF),
+      backgroundColor: primarycolour,
       body: Center(
         child: Stack(
           children: [
@@ -82,7 +83,7 @@ class WelcomePage extends StatelessWidget {
                         child: Text(
                           "Get Started",
                           style: GoogleFonts.quicksand(
-                            color: const Color(0xff7D40AF),
+                            color: primarycolour,
                             fontSize: getPropScreenWidth(23),
                             fontWeight: FontWeight.w700,
                           ),
