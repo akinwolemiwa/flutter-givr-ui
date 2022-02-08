@@ -11,7 +11,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primarycolour,
+      backgroundColor: darkpurple,
       body: Center(
         child: Stack(
           children: [
@@ -25,14 +25,11 @@ class WelcomePage extends StatelessWidget {
                     foregroundDecoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: secondarycolour,
+                        color: lightpurple,
                         width: getPropScreenWidth(28.77),
                       ),
                     ),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xffEED1FF),
-                    ),
+                    decoration: purplecircle,
                   ),
                   SizedBox(
                     height: getPropScreenHeight(24),
@@ -67,15 +64,7 @@ class WelcomePage extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      decoration: const BoxDecoration(
-                        color: white,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(62),
-                          bottomRight: Radius.circular(62),
-                          topLeft: Radius.circular(62),
-                          bottomLeft: Radius.circular(62),
-                        ),
-                      ),
+                      decoration: buttonwithborder,
                       height: getPropScreenHeight(76),
                       width: getPropScreenWidth(312),
                       child: Align(
@@ -83,7 +72,7 @@ class WelcomePage extends StatelessWidget {
                         child: Text(
                           "Get Started",
                           style: GoogleFonts.quicksand(
-                            color: primarycolour,
+                            color: darkpurple,
                             fontSize: getPropScreenWidth(23),
                             fontWeight: FontWeight.w700,
                           ),

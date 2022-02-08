@@ -34,12 +34,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           builder: (context, widget) => ResponsiveWrapper.builder(
             ClampingScrollWrapper.builder(context, widget!),
-            breakpoints: const [
-              ResponsiveBreakpoint.resize(350, name: MOBILE),
-              ResponsiveBreakpoint.autoScale(600, name: TABLET),
-              ResponsiveBreakpoint.resize(800, name: DESKTOP),
-              ResponsiveBreakpoint.autoScale(1700, name: 'XL')
-            ],
+            breakpoints: breakpoints,
           ),
           title: 'Givr',
           theme: ThemeData(
@@ -64,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(splashscreentime, () {
       Navigator.pushReplacement(
         // ignore: unnecessary_this
         this.context,
@@ -89,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Container(
                   height: getPropScreenHeight(896),
-                  color: primarycolour,
+                  color: darkpurple,
                 ),
                 // ignore: avoid_unnecessary_containers
                 Text(

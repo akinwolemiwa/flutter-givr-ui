@@ -37,7 +37,7 @@ class ProfileInfo extends StatelessWidget {
                   foregroundDecoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: secondarycolour,
+                      color: lightpurple,
                       width: getPropScreenWidth(8),
                     ),
                   ),
@@ -106,7 +106,7 @@ class UserLocation extends StatelessWidget {
         children: [
           const Icon(
             Boxicons.bxs_map,
-            color: secondarycolour,
+            color: lightpurple,
             size: 20,
           ),
           Text(
@@ -150,7 +150,7 @@ class ViewDonations extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: secondarycolour,
+                  color: lightpurple,
                 ),
               ),
               SizedBox(
@@ -210,7 +210,7 @@ class ContactDetails extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: secondarycolour,
+                  color: lightpurple,
                 ),
               ),
               SizedBox(
@@ -270,7 +270,7 @@ class ProfileSettings extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: secondarycolour,
+                  color: lightpurple,
                 ),
               ),
               SizedBox(

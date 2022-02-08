@@ -21,7 +21,7 @@ class Login extends StatelessWidget {
               style: GoogleFonts.quicksand(
                 fontSize: getPropScreenWidth(64),
                 fontWeight: FontWeight.w700,
-                color: const Color(0xff9D4EDD),
+                color: darkpurple,
               ),
             ),
             Text(
@@ -29,7 +29,7 @@ class Login extends StatelessWidget {
               style: GoogleFonts.quicksand(
                 fontSize: getPropScreenWidth(18),
                 fontWeight: FontWeight.w400,
-                color: const Color(0xff9D4EDD),
+                color: darkpurple,
               ),
             ),
             SizedBox(
@@ -52,7 +52,7 @@ class Login extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   // ignore: prefer_const_constructors
-                  color: primarycolour,
+                  color: darkpurple,
                   // ignore: prefer_const_constructors
                   borderRadius: BorderRadius.only(
                     // ignore: prefer_const_constructors
@@ -114,7 +114,7 @@ class Login extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       fontSize: getPropScreenWidth(12),
                       fontWeight: FontWeight.w300,
-                      color: primarycolour,
+                      color: darkpurple,
                     ),
                   ),
                 ],

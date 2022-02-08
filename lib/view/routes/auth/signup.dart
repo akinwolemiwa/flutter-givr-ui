@@ -41,7 +41,7 @@ class SignUp extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 // ignore: prefer_const_constructors
-                color: primarycolour,
+                color: darkpurple,
                 // ignore: prefer_const_constructors
                 borderRadius: BorderRadius.only(
                   // ignore: prefer_const_constructors
@@ -102,7 +102,7 @@ class SignUp extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       fontSize: getPropScreenWidth(12),
                       fontWeight: FontWeight.w300,
-                      color: primarycolour,
+                      color: darkpurple,
                     ),
                   ),
                 ],
