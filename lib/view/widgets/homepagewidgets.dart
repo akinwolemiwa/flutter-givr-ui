@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
 import 'package:givr/view/routes/charity/charity.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -67,7 +68,7 @@ class ImageStack extends StatelessWidget {
               style: GoogleFonts.roboto(
                   fontSize: getPropScreenWidth(14),
                   fontWeight: FontWeight.w500,
-                  color: Colors.white),
+                  color: white),
             ),
           ),
         ),
@@ -324,7 +325,7 @@ class Schedule extends StatelessWidget {
                     child: Text(
                       "Schedule a Donation",
                       style: GoogleFonts.quicksand(
-                        color: Colors.white,
+                        color: white,
                         fontSize: getPropScreenWidth(14),
                         fontWeight: FontWeight.w700,
                       ),

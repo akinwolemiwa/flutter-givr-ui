@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
                   child: Text(
                     "Login",
                     style: GoogleFonts.quicksand(
-                      color: Colors.white,
+                      color: white,
                       fontSize: getPropScreenWidth(15),
                       fontWeight: FontWeight.w700,
                     ),

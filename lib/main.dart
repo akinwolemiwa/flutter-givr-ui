@@ -95,7 +95,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Text(
                   "Givr.",
                   style: GoogleFonts.quicksand(
-                    color: Colors.white,
+                    color: white,
                     fontSize: getPropScreenWidth(64),
                     fontWeight: FontWeight.w700,
                   ),

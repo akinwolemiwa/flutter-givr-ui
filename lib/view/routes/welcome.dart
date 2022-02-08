@@ -40,7 +40,7 @@ class WelcomePage extends StatelessWidget {
                   Text(
                     "Givr.",
                     style: GoogleFonts.quicksand(
-                      color: Colors.white,
+                      color: white,
                       fontSize: getPropScreenWidth(64),
                       fontWeight: FontWeight.w700,
                     ),
@@ -48,7 +48,7 @@ class WelcomePage extends StatelessWidget {
                   Text(
                     "A new way to give",
                     style: GoogleFonts.quicksand(
-                      color: Colors.white,
+                      color: white,
                       fontSize: getPropScreenWidth(20),
                       fontWeight: FontWeight.w500,
                     ),
@@ -68,7 +68,7 @@ class WelcomePage extends StatelessWidget {
                     },
                     child: Container(
                       decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: white,
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(62),
                           bottomRight: Radius.circular(62),

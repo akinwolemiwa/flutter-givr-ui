@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 // import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/view/routes/home/homepage.dart';
 import 'package:givr/view/routes/home/notificationscreen.dart';
 import 'package:givr/view/routes/home/profile.dart';
@@ -46,8 +47,8 @@ class _NavState extends State<Nav> {
       },
       child: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
-          activeColor: Colors.white,
-          inactiveColor: Colors.white,
+          activeColor: white,
+          inactiveColor: white,
           backgroundColor: const Color(0xff7B2CBF),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -133,8 +134,8 @@ class _NavState extends State<Nav> {
     //       nav.currentIndex = index;
     //     },
     //     backgroundColor: const Color(0xff7B2CBF),
-    //     unselectedItemColor: Colors.white,
-    //     selectedItemColor: Colors.white,
+    //     unselectedItemColor: White,
+    //     selectedItemColor: White,
     //     items: const [
     //       BottomNavigationBarItem(
     //         icon: Icon(
