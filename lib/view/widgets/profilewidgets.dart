@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,7 +37,7 @@ class ProfileInfo extends StatelessWidget {
                   foregroundDecoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: const Color(0xffE0AAFF),
+                      color: secondarycolour,
                       width: getPropScreenWidth(8),
                     ),
                   ),
@@ -105,7 +106,7 @@ class UserLocation extends StatelessWidget {
         children: [
           const Icon(
             Boxicons.bxs_map,
-            color: Color(0xffE0AAFF),
+            color: secondarycolour,
             size: 20,
           ),
           Text(
@@ -149,7 +150,7 @@ class ViewDonations extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xffE0AAFF),
+                  color: secondarycolour,
                 ),
               ),
               SizedBox(
@@ -209,7 +210,7 @@ class ContactDetails extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xffE0AAFF),
+                  color: secondarycolour,
                 ),
               ),
               SizedBox(
@@ -269,7 +270,7 @@ class ProfileSettings extends StatelessWidget {
                 height: getPropScreenHeight(50),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xffE0AAFF),
+                  color: secondarycolour,
                 ),
               ),
               SizedBox(

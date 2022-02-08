@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
                     foregroundDecoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: const Color(0xffE0AAFF),
+                        color: secondarycolour,
                         width: getPropScreenWidth(28.77),
                       ),
                     ),

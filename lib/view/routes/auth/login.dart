@@ -52,7 +52,7 @@ class Login extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   // ignore: prefer_const_constructors
-                  color: Color(0xff7D40AF),
+                  color: primarycolour,
                   // ignore: prefer_const_constructors
                   borderRadius: BorderRadius.only(
                     // ignore: prefer_const_constructors

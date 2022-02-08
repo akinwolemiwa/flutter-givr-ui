@@ -121,7 +121,7 @@ class Options extends StatelessWidget {
               width: getPropScreenWidth(170),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: const Color(0xffE0AAFF),
+                  color: secondarycolour,
                 ),
                 borderRadius: const BorderRadius.all(
                   Radius.circular(25),
@@ -133,7 +133,7 @@ class Options extends StatelessWidget {
                   Container(
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color(0xffE0AAFF),
+                      color: secondarycolour,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(14),
@@ -170,7 +170,7 @@ class Options extends StatelessWidget {
             width: getPropScreenWidth(170),
             decoration: BoxDecoration(
               border: Border.all(
-                color: const Color(0xffE0AAFF),
+                color: secondarycolour,
               ),
               borderRadius: const BorderRadius.all(
                 Radius.circular(25),
@@ -182,7 +182,7 @@ class Options extends StatelessWidget {
                 Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xffE0AAFF),
+                    color: secondarycolour,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(14),
@@ -230,7 +230,7 @@ class Schedule extends StatelessWidget {
       width: getPropScreenWidth(364),
       decoration: BoxDecoration(
         border: Border.all(
-          color: const Color(0xffE0AAFF),
+          color: secondarycolour,
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(25),
@@ -254,7 +254,7 @@ class Schedule extends StatelessWidget {
                 ),
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xffE0AAFF),
+                  color: secondarycolour,
                 ),
               ),
               SizedBox(
@@ -298,7 +298,7 @@ class Schedule extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     // ignore: prefer_const_constructors
-                    color: Color(0xff7D40AF),
+                    color: primarycolour,
                     // ignore: prefer_const_constructors
                     borderRadius: BorderRadius.only(
                       // ignore: prefer_const_constructors
