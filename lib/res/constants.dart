@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+//colors
 const darkpurple = Color(0xff7D40AF);
 const lightpurple = Color(0xffE0AAFF);
 const lighterpurple = Color(0xffEED1FF);
@@ -20,8 +21,10 @@ const buttonwithborder = BoxDecoration(
   ),
 );
 
+//splashscreen
 const splashscreentime = Duration(seconds: 5);
 
+//responsive framework
 const breakpoints = [
   ResponsiveBreakpoint.resize(350, name: MOBILE),
   ResponsiveBreakpoint.autoScale(600, name: TABLET),
