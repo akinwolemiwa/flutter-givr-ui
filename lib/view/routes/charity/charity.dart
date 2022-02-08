@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:givr/size_config.dart';
+import 'package:givr/res/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Charity extends StatelessWidget {

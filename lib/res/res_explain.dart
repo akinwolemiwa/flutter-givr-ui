@@ -1,0 +1,1 @@
+// holds class related to colors, dimensions, string (the constants of the project)

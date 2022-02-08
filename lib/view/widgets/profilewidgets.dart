@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:givr/size_config.dart';
+import 'package:givr/res/size_config.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileHeader extends StatelessWidget {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:givr/models/navbarmodel.dart';
-import 'package:givr/routes/home/homepage.dart';
-import 'package:givr/routes/home/notificationscreen.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
-import 'package:givr/routes/home/profile.dart';
 // import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:givr/view/routes/home/homepage.dart';
+import 'package:givr/view/routes/home/notificationscreen.dart';
+import 'package:givr/view/routes/home/profile.dart';
 
 class Nav extends StatefulWidget {
   const Nav({Key? key}) : super(key: key);

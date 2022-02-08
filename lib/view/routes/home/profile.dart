@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:givr/size_config.dart';
-import 'package:givr/widgets/profilewidgets.dart';
+import 'package:givr/res/size_config.dart';
+import 'package:givr/view/widgets/profilewidgets.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);

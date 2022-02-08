@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:givr/routes/auth/signup.dart';
-import 'package:givr/routes/home/nav.dart';
-import 'package:givr/size_config.dart';
+import 'package:givr/res/size_config.dart';
+import 'package:givr/view/routes/auth/signup.dart';
+import 'package:givr/view/routes/home/nav.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 

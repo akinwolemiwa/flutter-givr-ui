@@ -1,0 +1,1 @@
+// holds model classesnfor the API response and for clean architecture, create inner directories for each API response model classes
