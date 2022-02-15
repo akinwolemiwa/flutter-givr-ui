@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:givr/main.dart';
 import 'package:givr/view/routes/auth/login.dart';
+import 'package:givr/view/routes/auth/signup.dart';
+import 'package:givr/view/routes/charity/charity.dart';
+import 'package:givr/view/routes/home/nav.dart';
 
 class PageViewTransition<T> extends MaterialPageRoute<T> {
   PageViewTransition({WidgetBuilder? builder, RouteSettings? settings})
@@ -41,6 +44,9 @@ class SlideRightRoute extends PageRouteBuilder {
 class AppRoute {
   static const String splashscreen = '/splashScreen';
   static const String login = '/login';
+  static const String nav = '/nav';
+  static const String signup = '/signup';
+  static const String charity = '/charity';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -48,6 +54,12 @@ class AppRoute {
         return PageViewTransition(builder: (_) => const SplashScreen());
       case login:
         return PageViewTransition(builder: (_) => const Login());
+      case nav:
+        return PageViewTransition(builder: (_) => const Nav());
+      case signup:
+        return PageViewTransition(builder: (_) => const SignUp());
+      case charity:
+        return PageViewTransition(builder: (_) => const Charity());
       default:
         return PageViewTransition(
           builder: (_) => Scaffold(

@@ -54,9 +54,9 @@ class WelcomePage extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Navigator.of(context).pushNamed(
-                      //   AppRoute.login,
-                      // );
+                      Navigator.of(context).pushNamed(
+                        AppRoute.login,
+                      );
                       // Navigator.push(
                       //   context,
                       //   PageTransition(

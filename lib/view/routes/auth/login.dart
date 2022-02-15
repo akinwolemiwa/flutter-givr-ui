@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
-import 'package:givr/view/routes/auth/signup.dart';
-import 'package:givr/view/routes/home/nav.dart';
+import 'package:givr/view/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -41,13 +39,16 @@ class Login extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    child: const Nav(),
-                    type: PageTransitionType.fade,
-                  ),
+                Navigator.of(context).pushNamed(
+                  AppRoute.nav,
                 );
+                // Navigator.push(
+                //   context,
+                //   PageTransition(
+                //     child: const Nav(),
+                //     type: PageTransitionType.fade,
+                //   ),
+                // );
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -92,13 +93,16 @@ class Login extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    child: const SignUp(),
-                    type: PageTransitionType.fade,
-                  ),
+                Navigator.of(context).pushNamed(
+                  AppRoute.signup,
                 );
+                // Navigator.push(
+                //   context,
+                //   PageTransition(
+                //     child: const SignUp(),
+                //     type: PageTransitionType.fade,
+                //   ),
+                // );
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
