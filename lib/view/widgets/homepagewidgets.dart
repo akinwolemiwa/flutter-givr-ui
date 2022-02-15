@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
-import 'package:givr/view/routes/charity/charity.dart';
+import 'package:givr/view/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -109,12 +108,15 @@ class Options extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context, rootNavigator: false).push(
-                PageTransition(
-                  child: const Charity(),
-                  type: PageTransitionType.fade,
-                ),
+              Navigator.of(context).pushNamed(
+                AppRoute.charity,
               );
+              // Navigator.of(context, rootNavigator: false).push(
+              //   PageTransition(
+              //     child: const Charity(),
+              //     type: PageTransitionType.fade,
+              //   ),
+              // );
             },
             child: Container(
               height: getPropScreenHeight(170),
