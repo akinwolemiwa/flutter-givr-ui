@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const SplashScreen(),
           debugShowCheckedModeBanner: false,
+          home: const SplashScreen(),
         ),
       ),
     );
@@ -60,6 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(splashscreentime, () {
+      // Navigator.pushReplacement(context, 'welcomepage');
       Navigator.pushReplacement(
         // ignore: unnecessary_this
         this.context,
