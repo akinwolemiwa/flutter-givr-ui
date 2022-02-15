@@ -13,6 +13,7 @@ const purplecircle = BoxDecoration(
   color: lighterpurple,
 );
 const buttonwithborder = BoxDecoration(
+  color: Colors.white,
   borderRadius: BorderRadius.only(
     topRight: Radius.circular(62),
     bottomRight: Radius.circular(62),

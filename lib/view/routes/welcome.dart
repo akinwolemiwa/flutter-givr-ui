@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
-import 'package:givr/view/routes/auth/login.dart';
 import 'package:givr/view/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -56,9 +54,9 @@ class WelcomePage extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(
-                        AppRoute.login,
-                      );
+                      // Navigator.of(context).pushNamed(
+                      //   AppRoute.login,
+                      // );
                       // Navigator.push(
                       //   context,
                       //   PageTransition(

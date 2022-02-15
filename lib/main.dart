@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:givr/models/navbarmodel.dart';
 import 'package:givr/res/constants.dart';
 import 'package:givr/res/size_config.dart';
+import 'package:givr/view/routes/routes.dart';
 import 'package:givr/view/routes/welcome.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -41,6 +42,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
           debugShowCheckedModeBanner: false,
+          onGenerateRoute: (RouteSettings settings) =>
+              AppRoute.generateRoute(settings),
           home: const SplashScreen(),
         ),
       ),
